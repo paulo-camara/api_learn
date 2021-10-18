@@ -41,6 +41,6 @@ app.post('/update_filme', (req, resp) => {
     _query(`update filme set nome_filme=$1 where id_filme=$2`, [new_name, id_filme], callback);
 });
 
-app.post('/verify_api', (req, resp) => {
+app.get('/verify_api', (req, resp) => {
     resp.send('API running in AWS EC2 server');
 });
